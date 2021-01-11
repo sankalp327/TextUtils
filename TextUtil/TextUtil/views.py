@@ -6,7 +6,8 @@ def index(request):
     return render(request, 'index.html')
 
 
-def about(request):
+def analyze(request):
     djtext = request.GET.get('text', 'default')
-    print(djtext)
-    return HttpResponse(djtext)
+    temp = request.GET.get('removepun', 'off')
+    print(temp)
+    return HttpResponse( temp)
